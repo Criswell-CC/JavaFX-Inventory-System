@@ -1,0 +1,26 @@
+#header-text {
+
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 25 15 10 5;
+
+}
+
+#table-row {
+
+    -fx-padding: 0 120 10 120;
+
+}
+
+#table-container {
+
+    -fx-border-color: black;
+    -fx-border-radius: 4;
+
+}
+
+#table-header {
+
+    -fx-font-weight: bold;
+
+}

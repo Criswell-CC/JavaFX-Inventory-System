@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" stylesheets="@addModifyPartForm.css"
+          hgap="10.0" vgap="10" >
+
+    <fx:define>
+        <ToggleGroup fx:id="toggleGroup" />
+    </fx:define>
+
+    <padding>
+        <Insets top="30" right="25" left="25"/>
+    </padding>
+
+    <Label fx:id="mainLabel" id="main-label" text="Add Part" GridPane.columnIndex="0" GridPane.rowIndex="0" alignment="CENTER">
+        <padding>
+            <Insets bottom="20.0"/>
+        </padding>
+    </Label>
+
+    <RadioButton fx:id="inHouseRadioButton" mnemonicParsing="false" text="In-House" GridPane.columnIndex="1" GridPane.rowIndex="0"
+                 toggleGroup="$toggleGroup">
+        <padding>
+            <Insets left="35.0" bottom="20.0"/>
+        </padding>
+    </RadioButton>
+
+    <RadioButton fx:id="outsourcedRadioButton" mnemonicParsing="false" text="Outsourced" GridPane.columnIndex="2" GridPane.rowIndex="0"
+                 toggleGroup="$toggleGroup">
+        <padding>
+            <Insets bottom="20.0"/>
+        </padding>
+    </RadioButton>
+
+    <Label text="ID" GridPane.columnIndex="0" GridPane.rowIndex="1" alignment="CENTER" maxWidth="80.0">
+        <padding>
+            <Insets left="12.0"/>
+        </padding>
+    </Label>
+
+    <Label text="Name" GridPane.columnIndex="0" GridPane.rowIndex="2" alignment="CENTER" maxWidth="80.0">
+        <padding>
+            <Insets left="12.0"/>
+        </padding>
+    </Label>
+
+    <Label text="Inv" GridPane.columnIndex="0" GridPane.rowIndex="3" alignment="CENTER" maxWidth="80.0">
+        <padding>
+            <Insets left="12.0"/>
+        </padding>
+    </Label>
+
+    <Label text="Price/Cost" GridPane.columnIndex="0" GridPane.rowIndex="4" alignment="CENTER" maxWidth="80.0">
+        <padding>
+            <Insets left="12.0"/>
+        </padding>
+    </Label>
+
+    <Label text="Max" GridPane.columnIndex="0" GridPane.rowIndex="5" alignment="CENTER" maxWidth="80.0">
+        <padding>
+            <Insets left="12.0"/>
+        </padding>
+    </Label>
+
+    <Label fx:id="machineOrCompanyLabel" text="Machine ID" GridPane.columnIndex="0" GridPane.rowIndex="6"
+           alignment="CENTER" maxWidth="86.0">
+
+    </Label>
+
+    <HBox GridPane.columnIndex="2" GridPane.rowIndex="5" GridPane.columnSpan="2" spacing="10.0">
+        <Label text="Min" alignment="CENTER" maxWidth="80.0" >
+            <HBox.margin>
+                <Insets top="5.0" left="5.0"/>
+            </HBox.margin>
+        </Label>
+        <TextField fx:id="enteredMin" maxWidth="130.0"/>
+    </HBox>
+
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" disable="true" promptText="Auto Gen-Disabled"
+               maxWidth="130.0"/>
+    <TextField fx:id="enteredName" GridPane.columnIndex="1" GridPane.rowIndex="2" maxWidth="130.0"/>
+    <TextField fx:id="enteredInv" GridPane.columnIndex="1" GridPane.rowIndex="3" maxWidth="130.0"/>
+    <TextField fx:id="enteredPrice" GridPane.columnIndex="1" GridPane.rowIndex="4" maxWidth="130.0"/>
+    <TextField fx:id="enteredMax" GridPane.columnIndex="1" GridPane.rowIndex="5" maxWidth="130.0" />
+    <TextField fx:id="enteredMachineIDorCompanyName" GridPane.columnIndex="1" GridPane.rowIndex="6"
+               maxWidth="130.0"/>
+
+    <HBox GridPane.columnIndex="2" GridPane.rowIndex="7">
+        <children>
+            <Button fx:id="saveButton"  mnemonicParsing="false" text="Save">
+                <HBox.margin>
+                    <Insets right="15.0"/>
+                </HBox.margin>
+            </Button>
+            <Button fx:id="cancelButton" mnemonicParsing="false" text="Cancel" />
+        </children>
+        <padding>
+            <Insets top="15.0"/>
+        </padding>
+    </HBox>
+</GridPane>
